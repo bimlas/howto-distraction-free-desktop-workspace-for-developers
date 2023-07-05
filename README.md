@@ -1,6 +1,6 @@
 # Distraction free desktop workspace for developers
 
-Searching and organizing windows interrupts the workflow you are currently working on and disrupts the continuity of your thoughts, generating stress which has been proven to reduce the efficiency of cognitive processes, including creative work. Therefore, it is important that the environment you use on a daily basis is comfortable. The following article is about organizing the workspace, quick switching between windows and workspaces (virtual desktops), and the solutions I have found based on my experience to provide the comfort of Tmux, which is run in the terminal, in GUI desktop environments (XFCE, KDE, GNOME, etc.), and further improve it with tiling window managers (AwesomeWM, Qtile, I3, etc.). The main purpose of Rofi shell scripts is to create an easily usable, fast, keyboard-driven workflow.
+Searching for and arranging windows momentarily interrupts the workflow and disrupts the continuity of your thoughts, therefore easily impeding the flow. Consequently, the comfort of the environment you use on a daily basis is important. The following article discusses organizing the workspace and enabling fast switching between windows and virtual desktops. Based on my experience, I have compiled Linux solutions that bring the convenience of Tmux, commonly found in terminal environments, to GUI desktop environments (such as XFCE, KDE, GNOME, etc.). Tiling window managers (AwesomeWM, Qtile, I3, etc.) are optional but highly useful components of the environment. The main goal of Rofi shell scripts is to create an easily usable, fast, and keyboard-driven workflow.
 
 You can think of the windows in the desktop environment as different panels or views in an IDE, and like panels, windows perform different tasks. An IDE is convenient (among other reasons) because all the necessary tools for a task are in one place, and you know the position of each panel without thinking. So, if you can easily access your windows, then **your operating system itself can be as efficient as an integrated development environment** ("Unix as IDE").
 
@@ -29,7 +29,7 @@ In Tmux, you can create additional workspaces, virtual desktops, so you can have
 However, this solution has several disadvantages for me:
 
 - If you need to open more and more applications for a task, you will once again have limited space, requiring you to create new workspaces. One possible solution is to group the workspaces by naming them (e.g., splitting the `fix-db-issue` workspace into `fix-db-issue_code` and `fix-db-issue_db-client`), but this is not efficient; clearly, it is a workaround.
-- Based on the list of workspaces, you cannot see which applications are open in each workspace. For example, if my colleague requested a database query from me, I knew that I already had a pre-opened database client, but I couldn't remember which task it was related to or which workspace it appeared in. Although I could search among the workspace names textually, it would have been simpler to search for the name of the application itself, relying solely on text search. The mixed use of spatial memory and textual search is not efficient.
+- Based on the list of workspaces, you cannot see which applications are open in each workspace. For example, if my colleague requested a database query from me, I knew that I already had a pre-opened database client, but I couldn't remember which task it was related to or which workspace it appeared in. Although I could search among the workspace names textually, it would have been simpler to search for the name of the application itself, relying solely on text search. **The mixed use of spatial memory and textual search is not efficient.**
 
 ### Separate sessions for each task
 
@@ -38,8 +38,6 @@ In Tmux, workspaces are associated with a session, but you can create multiple s
 ![tmux multiple sessions](./screencast/04-tmux-multiple-sessions.gif)
 
 While the force that enforces organization is eliminated, it still feels more natural to **switch between views of applications, rather than tasks. So, only the applications you want to see together will be on the screen**, even if multiple applications are associated with the task you're working on.
-
-The force that enforces organization is eliminated, but it still feels more natural to switch between views of applications rather than tasks. When switching between views, only the applications you want to see together will be in front of you on the screen. This allows you to focus on the views instead of the tasks, even if multiple applications are associated with the task you're currently working on.
 
 ### Single session for each task
 
@@ -51,7 +49,7 @@ The solution that appeals to me the most is to have everything within a single s
 
 The solutions provided by Tmux are highly efficient, and many individuals who primarily use terminal applications are satisfied with them and do not require anything more. However, the problem is that we often need to use not only terminal applications but also other types of applications. For example, certain documentation may only be viewable with a PDF reader, web browsers are graphical applications, and some people prefer using VSCode over Vim or Emacs.
 
-In a desktop environment, alongside terminal applications, you can also open GUI programs, which are often essential requirements nowadays. One advantage of GUI programs compared to Tmux is that instead of using splits, you can open two separate, independent windows that can be freely moved within the available space. These windows can overlap, allowing you to arrange and resize them freely. This provides more flexibility and fewer restrictions, but it can also lead to a potentially chaotic desktop where things become less transparent.
+In a desktop environment, alongside terminal applications, you can open GUI programs, which are often essential requirements nowadays. One advantage of windows compared to Tmux is that instead of using splits, you can open two separate, independent windows that can be freely moved within the available space. These windows can overlap, allowing you to arrange and resize them freely. This provides more flexibility and fewer restrictions, but it can also lead to a potentially chaotic desktop where things become less transparent.
 
 ![classical desktop](./screencast/06-classical-desktop.png)
 
@@ -61,7 +59,7 @@ To make your desktop more organized, you can maximize the windows to full size. 
 
 Although the desktop environment can handle workspaces, many people do not use them because they may find them cumbersome to use. However, if you do move the windows you want to see side by side to a separate workspace, you need to find a solution to see the list of all open windows in one place; otherwise, you would have to mentally keep track of which window is in which workspace.
 
-Typically, we switch between windows based on a list of windows, whether through the desktop panel, a menu, or by pressing Alt+Tab. The problem with this approach is that you have to search through the list and go through each item, which can be time-consuming and stressful, especially when there are many open windows.
+Typically, we switch between windows based on a list of windows, whether through the desktop panel, a menu, or by pressing `Alt+Tab`. The problem with this approach is that you have to search through the list and go through each item, which can be time-consuming and stressful, especially when there are many open windows.
 
 If a well-organized workflow can already be achieved in the terminal, what options do we have to make the desktop environment just as convenient?
 
@@ -75,7 +73,7 @@ The advantage of this solution is that you can group your windows by moving them
 
 ### Separate browser windows instead of tabs
 
-If you already have a filterable list of windows, there is no need to continue searching among the tabs within the browser. It is simpler to view each browser page in a separate window and search for the tab name in the window list. The creators of Chrome also recognized that it is easier to search for tabs textually (https://blog.google/products/chrome/search-your-tabs-bookmarks-and-history-in-the-chrome-address-bar/), but with a general window filtering feature, you can use this functionality with any browser. If you only want to search among the browser tabs and exclude other applications, start by filtering based on a partial match of the browser's name (e.g., for Chrome, use 'chr'). You don't need to worry about resource consumption because having two separate browser windows requires only slightly more resources than having two tabs.
+If you already have a filterable list of windows, there is no need to continue searching among the tabs within the browser. It is simpler to view each browser page in a separate window and search for the tab name in the window list. The creators of Chrome also recognized that it is easier to search for tabs textually (https://blog.google/products/chrome/search-your-tabs-bookmarks-and-history-in-the-chrome-address-bar/), but with a general window filtering feature, you can use this functionality with any browser. If you only want to search among the browser tabs and exclude other applications, start by filtering based on a partial match of the browser's name (e.g., for Chrome, use `chr`). You don't need to worry about resource consumption because having two separate browser windows requires only slightly more resources than having two tabs.
 
 To open a link in a new tab, you need to click on it with the middle mouse button. If you want to open it in a new window, use the `Ctrl+Shift+LeftClick` combination. To open a new, empty tab, you can use the `Ctrl+T` combination, and for opening a new window, you can use `Ctrl+N`. There are browser extensions available that automatically open every link in a new window, but they don't always work with different Chromium-based browsers (Vivaldi, Brave, Edge, etc.), so I do not recommend them.
 
@@ -85,13 +83,13 @@ To make the windows truly searchable, you need to know their names or at least s
 
 ![domain in browser title](./screencast/09-domain-in-browser-title.png)
 
-A similar problem exists with terminal applications where, even though the shell sets the title of the terminal window to include the name of the running application and the current path, it's not always sufficient for identification. To ensure that each opened terminal always has a distinctive title, you can create a shortcut or alias that prompts you to provide a title before opening the terminal. This way, you can set a meaningful title that helps you easily identify the terminal window.
+A similar problem exists with terminal applications where, even though the shell sets the title of the terminal window to include the name of the running application and the current path, it's not always sufficient for identification. To ensure that each opened terminal always has a distinctive title, you can create a shortcut that prompts you to provide a title before opening the terminal. This way, you can set a meaningful title that helps you easily identify the terminal window.
 
 ![named terminal](./screencast/10-named-terminal.png)
 
 ### Switch or launch project
 
-If you already have a searchable window list that allows you to search among the opened windows, it would be great if you could launch the necessary application for your task if it's not already open. Even better, it would be ideal if it could open the entire project you want to work on instead of just the application. Luckily, Rofi is highly versatile and capable of doing this: if the entered text is not found in the list of opened windows, it can switch to the next Rofi mode, which contains projects and SSH hosts, and open them in the appropriate way.
+If you already have a searchable window list that allows you to search among the opened windows, it would be great if you could launch the necessary application for your task if it's not already open. Even better, it would be ideal if it could open the entire project you want to work on instead of just the application. Luckily, Rofi is highly versatile and capable of doing this: if the entered text is not found in the list of opened windows, you can switch to the next Rofi mode, which contains projects and SSH hosts, and open them in the appropriate way.
 
 This is one possible way to expand the functionality of Rofi and customize the management of opened windows and projects. The exact implementation will depend on the system you are using and how Rofi is configured on your system. The Rofi documentation and configuration files will help you customize the settings and extend the functionality.
 
@@ -101,7 +99,7 @@ In addition to opening the project, it performs the necessary basic steps for yo
 
 ### Arrange windows, group windows to views
 
-In addition to window switching, it would be great to manage the layout of windows, allowing you to easily move two windows to another workspace and display them side by side. **Dynamic tiling window managers implement window layouts similar to Tmux for GUI applications**, providing a similar workflow where windows are automatically resized when new applications are opened, similar to how Tmux behaves. However, **the real advantage of tiling window managers lies in their scriptability, allowing you to customize their behavior to suit your specific needs**. For example, you can easily resize the window headers to make them readable in a screencast. 
+In addition to window switching, it would be great to manage the layout of windows, allowing you to easily move two windows to another workspace and display them side by side. **Dynamic tiling window managers implement window layouts similar to Tmux for GUI applications**, providing a similar workflow where windows are automatically resized when new applications are opened, similar to how Tmux behaves. However, **the real advantage of tiling window managers lies in their scriptability, allowing you to customize their behavior to suit your specific needs**. For example, you can easily resize the window headers to make them readable in a screencast.
 
 To overcome the drawback of continuously decreasing window size in dynamic tiling, while still taking advantage of automatic window arrangement, you can write a script for the window list that groups windows with a button press. This approach allows you to achieve the desired window grouping and layout while utilizing the benefits of a dynamic tiling window manager. By scripting and customizing the behavior, you can tailor the window manager to your specific requirements.
 
@@ -123,7 +121,7 @@ The workspaces will actually be optional views rather than continuous parts of y
 
 You probably wouldn't want to replace your desktop environment just to have organized windows, but fortunately, it's not necessary because **tiling window managers can usually be easily integrated into existing desktop environments**. This means that your system remains the same, but the appearance of window borders and the behavior of windows are determined by the tiling window manager. For example, in Linux Mint XFCE Edition, there is a setting that allows you to easily switch between window managers with a single click (Desktop Settings).
 
-During the writing of the article, I made an effort to ensure that my implementations could be used in any desktop environment and tried to avoid using tiling window managers. However, I simply couldn't find a way to achieve the desired functionality using tools like `wmctrl`, `xdotool`, and similar window manipulation applications. Tiling window managers have hooks and make it easy to create and modify workspaces, but **simpler command-line applications cannot handle windows at such an abstract level** because it's simply not their purpose to provide a comprehensive solution for every task. If I insisted on using these applications, I would have to implement the hook mechanism and other abstract solutions that tiling window managers already provide, which would complicate the goal of simplification.
+During the writing of the article, I made an effort to ensure that my implementations could be used in any desktop environment and tried to avoid using tiling window managers. However, I simply couldn't find a way to achieve the desired functionality using tools like `wmctrl`, `xdotool`, and similar window manipulation applications. Tiling window managers have events, hooks and make it easy to create and modify workspaces, but **simpler command-line applications cannot handle windows at such an abstract level** because it's simply not their purpose to provide a comprehensive solution for every task. If I insisted on using these applications, I would have to implement the hook mechanism and other abstract solutions that tiling window managers already provide, which would complicate the goal of simplification.
 
 ## Continue the list
 
