@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Git fetch-log:
+# https://github.com/bimlas/home/blob/04576c810f1f0bce59980c1cb1767f6ebf20445c/linux/.gitconfig_files/custom_commands/git-fetch-log
+
+xfce4-terminal \
+  --title "${TITLE}" \
+  --working-directory "${DIRECTORY}" \
+  --execute ${SHELL} --interactive --login -c \
+  "git fetch; git fetch-log --format=oneline; echo; git status --short; ${SHELL}"

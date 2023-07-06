@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# List items
+if [ ${ROFI_RETV} -eq 0 ]; then
+  echo -e '\0prompt\x1fproject'
+
+  find "${PROJECTS_DIR}" -mindepth 1 -maxdepth 1 -type d \
+  | sort | sed -e 's/.*/&\x0icon\x1ffolder/'
+
+# Open selected item
+else
+  export TITLE=$(basename "${1}")
+  export DIRECTORY="${1}"
+  "${SCRIPT_DIR}/lib/open-project"
+
+fi
+

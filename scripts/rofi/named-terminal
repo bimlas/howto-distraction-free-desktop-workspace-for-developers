@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Get script directory even if it's a symlink
+SCRIPT=${BASH_SOURCE[0]}
+while [ -L "${SCRIPT}" ]; do
+  SCRIPT_DIR=$( cd -P "$( dirname "${SCRIPT}" )" >/dev/null 2>&1 && pwd )
+  SCRIPT=$(readlink "${SCRIPT}")
+  [[ $SCRIPT != /* ]] && SCRIPT="${SCRIPT_DIR}/${SCRIPT}"
+done
+export SCRIPT_DIR=$( cd -P "$( dirname "$SCRIPT" )" >/dev/null 2>&1 && pwd )
+
+export TITLE="$(rofi -dmenu -p 'Title of terminal' -theme-str 'listview { enabled: false; }')"
+
+if [ "x${TITLE}" != "x" ]; then
+  "${SCRIPT_DIR}/lib/open-terminal"
+fi

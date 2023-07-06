@@ -123,6 +123,14 @@ You probably wouldn't want to replace your desktop environment just to have orga
 
 During the writing of the article, I made an effort to ensure that my implementations could be used in any desktop environment and tried to avoid using tiling window managers. However, I simply couldn't find a way to achieve the desired functionality using tools like `wmctrl`, `xdotool`, and similar window manipulation applications. Tiling window managers have events, hooks and make it easy to create and modify workspaces, but **simpler command-line applications cannot handle windows at such an abstract level** because it's simply not their purpose to provide a comprehensive solution for every task. If I insisted on using these applications, I would have to implement the hook mechanism and other abstract solutions that tiling window managers already provide, which would complicate the goal of simplification.
 
+## Scripts, implementation
+
+You can find the implementation of the mentioned features in the following repository:
+
+https://github.com/bimlas/howto-distraction-free-desktop-workspace-for-developers
+
+Please star if you like it!
+
 ## Continue the list
 
 These ideas can be applied in other areas as well. For example, if you consider Vim tabs as alternatives to workspaces and the buffer list as the equivalent of Rofi, you can create a similar workflow in Vim.
@@ -130,3 +138,4 @@ These ideas can be applied in other areas as well. For example, if you consider 
 I hope this description has given you some ideas on how to make your everyday work more efficient and enjoyable. Please continue the list with your own ideas and share tips for yourself and others!
 
 (PS.: The article was translated by AI)
+

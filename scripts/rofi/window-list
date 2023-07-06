@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Get script directory even if it's a symlink
+SCRIPT=${BASH_SOURCE[0]}
+while [ -L "${SCRIPT}" ]; do
+  SCRIPT_DIR=$( cd -P "$( dirname "${SCRIPT}" )" >/dev/null 2>&1 && pwd )
+  SCRIPT=$(readlink "${SCRIPT}")
+  [[ $SCRIPT != /* ]] && SCRIPT="${SCRIPT_DIR}/${SCRIPT}"
+done
+export SCRIPT_DIR=$( cd -P "$( dirname "$SCRIPT" )" >/dev/null 2>&1 && pwd )
+
+export WINDOW_MANAGER=${WINDOW_MANAGER:-awesome}
+export PROJECTS_DIR=${PROJECTS_DIR:-${HOME}}
+
+rofi \
+  -show window \
+  -modi window,project:"${SCRIPT_DIR}/modes/project",ssh \
+  -window-command "${SCRIPT_DIR}/lib/group-windows.${WINDOW_MANAGER} {window}"
