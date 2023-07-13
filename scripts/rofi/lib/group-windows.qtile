@@ -1,0 +1,44 @@
+#!/usr/bin/env python3
+# Qtile 0.22.1 Xorg implementation
+# https://qtile.org/
+#
+# !!! ATTENTION !!!
+#
+# You should disable `follow_mouse_focus` in Qtile config,
+# because if it's enabled, the script will move the window under the
+# cursor instead of the keyboard selected window!
+
+from libqtile.command.client import InteractiveCommandClient
+from sys import argv
+
+qtile = InteractiveCommandClient()
+
+def get_next_numbered_group_name():
+    next = "#1"
+    for group in qtile.groups():
+        if group == next:
+            next = "#{}".format(int(next.replace("#", "")) + 1)
+    return next
+
+focused_client_id = qtile.window.info()["id"]
+focused_client_group_name = qtile.window[focused_client_id].group.info()["name"]
+selected_client_id = int(argv[1])
+selected_client_group_name = qtile.window[selected_client_id].group.info()["name"]
+
+group = None
+if focused_client_group_name == selected_client_group_name:
+    group = get_next_numbered_group_name()
+    qtile.addgroup(group)
+    qtile.window[selected_client_id].togroup(group)
+    qtile.window[focused_client_id].togroup(group)
+else:
+    group = selected_client_group_name
+    qtile.window[focused_client_id].togroup(group)
+    
+main_group = list(qtile.groups().keys())[0]
+if focused_client_group_name != main_group and len(qtile.groups()[focused_client_group_name]["windows"]) <= 1:
+    qtile.group[focused_client_group_name].window.togroup(main_group)
+    qtile.delgroup(focused_client_group_name)
+
+qtile.group[group].toscreen()
+qtile.window[focused_client_id].focus()
