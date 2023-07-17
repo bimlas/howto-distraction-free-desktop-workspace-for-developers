@@ -17,3 +17,11 @@ Open a project directory, name the terminal, fetch latest modifications, show lo
 Move the seleced windows to a common workspace. Append the name of the window manager to the script to be able to use in different window managers.
 
 The preferred setting of the window manager is to have a single workspace created by default, where windows appear maximized (or tabbed). Then, the `group-windows` script creates a dynamically tiled workspace when creating a new workspace.
+
+The script have to implement these:
+
+- The argument is the ID of the selected window
+- If the selected window and the focused window are on the same workspace, move them to a newly created workspace
+  - The name of the created workspace should be `#1`, `#2`, `#3`, ..., to make it easily searchable in the list
+  - If there is only one window left on this workspace, move it to the main workspace and delete this workspace
+- If the selected window and the focused window are on different workspaces, move the focused window to the workspace of the selected window.

@@ -89,7 +89,7 @@ A similar problem exists with terminal applications where, even though the shell
 
 ### Switch or launch project
 
-If you already have a searchable window list that allows you to search among the opened windows, it would be great if you could launch the necessary application for your task if it's not already open. Even better, it would be ideal if it could open the entire project you want to work on instead of just the application. Luckily, Rofi is highly versatile and capable of doing this: if the entered text is not found in the list of opened windows, you can switch to the next Rofi mode, which contains projects and SSH hosts, and open them in the appropriate way.
+If you already have a searchable window list that allows you to search among the opened windows, it would be great if you could launch the necessary application for your task if it's not already open. We can use `rofi -show drun -show-icons` as an app launcher. Even better, it would be ideal if it could open the entire project you want to work on instead of just the application. Luckily, Rofi is highly versatile and capable of doing this: if the entered text is not found in the list of opened windows, you can switch to the next Rofi mode, which contains projects and SSH hosts, and open them in the appropriate way.
 
 This is one possible way to expand the functionality of Rofi and customize the management of opened windows and projects. The exact implementation will depend on the system you are using and how Rofi is configured on your system. The Rofi documentation and configuration files will help you customize the settings and extend the functionality.
 
@@ -138,4 +138,3 @@ These ideas can be applied in other areas as well. For example, if you consider 
 I hope this description has given you some ideas on how to make your everyday work more efficient and enjoyable. Please continue the list with your own ideas and share tips for yourself and others!
 
 (PS.: The article was translated by AI)
-
