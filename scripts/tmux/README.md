@@ -1,5 +1,9 @@
 # Tmux scripts
 
+Collection of [Tmux](https://github.com/tmux/tmux) scripts to easily navigate between windows and panes.
+
+Tested with **Tmux 3.2a**.
+
 ## Window list with fuzzy filter
 
 Add this script to your `~/.tmux.conf` to have a searchable list of windows and panes. The script depends on [FZF](https://github.com/junegunn/fzf).

@@ -1,8 +1,8 @@
 # Userscripts
 
-Collection of Userscripts scripts to easily navigate between windows.
+Collection of [userscripts](https://en.wikipedia.org/wiki/Userscript) to easily navigate between windows.
 
-To use them, you need to install a [Userscript](https://en.wikipedia.org/wiki/Userscript) manager, such as the [Violentmonkey](https://violentmonkey.github.io) browser extension and [add the script](https://violentmonkey.github.io/guide/creating-a-userscript/).
+To use them, you need to install a userscript manager, such as the [Violentmonkey](https://violentmonkey.github.io) browser extension and [add the script](https://violentmonkey.github.io/guide/creating-a-userscript/).
 
 ## URL in title
 

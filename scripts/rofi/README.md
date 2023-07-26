@@ -1,6 +1,6 @@
 # Rofi scripts
 
-Collection of Rofi scripts to easily navigate between windows.
+Collection of [Rofi](https://github.com/davatorium/rofi) scripts to easily navigate between windows.
 
 **You have to align the scripts in `lib` directory to your environment to be able to use them!** For example you may have different terminal emulator with different flags.
 
