@@ -20,7 +20,7 @@ Users vary in how they use Tmux, but generally, these styles are popular and add
 
 ### Separate workspaces for each task
 
-In Tmux, you can create additional workspaces, virtual desktops, so you can have a workspace, for example, where you see the code and documentation side by side, and another workspace where you have a database client and the database documentation open. This way, the programs are grouped logically according to their tasks. You can give names to the groups, and you can easily switch between them using a searchable list.
+In Tmux, you can create additional workspaces, virtual desktops, so you can have a workspace, for example, where you see the code and documentation side by side, and another workspace where you have a database client and the database documentation open. This way, the programs are grouped logically according to their tasks. You can give names to the groups, and you can easily switch between them using a searchable list (thanks to FZF).
 
 ![tmux window list fuzzy-filter](./screencast/03-tmux-window-list-fuzzy-filter.gif)
 
