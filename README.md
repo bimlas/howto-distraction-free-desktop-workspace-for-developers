@@ -135,6 +135,6 @@ Please star if you like it!
 
 These ideas can be applied in other areas as well. For example, if you consider Vim tabs as alternatives to workspaces and the buffer list as the equivalent of Rofi, you can create a similar workflow in Vim.
 
-I hope this description has given you some ideas on how to make your everyday work more efficient and enjoyable. Please continue the list with your own ideas and share tips for yourself and others! You can reply on https://github.com/bimlas/howto-distraction-free-desktop-workspace-for-developers/discussions
+I hope this description has given you some ideas on how to make your everyday work more efficient and enjoyable. Please continue the list with your own ideas and share tips with us! You can reply on https://github.com/bimlas/howto-distraction-free-desktop-workspace-for-developers/discussions
 
 (PS.: The article was translated by AI)
