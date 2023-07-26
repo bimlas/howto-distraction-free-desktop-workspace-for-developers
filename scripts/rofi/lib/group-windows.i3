@@ -2,6 +2,14 @@
 # i3 4.17.1 implementation
 # https://i3wm.org
 #
+# !!! ATTENTION !!!
+#
+# You should disable `focus_follows_mouse` in i3 config,
+# because if it's enabled, the script will move the window under the
+# cursor instead of the keyboard selected window!
+#
+# https://i3wm.org/docs/userguide.html#_focus_follows_mouse
+#
 # Dependencies:
 # - jq
 

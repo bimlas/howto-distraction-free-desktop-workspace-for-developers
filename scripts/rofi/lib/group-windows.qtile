@@ -7,6 +7,8 @@
 # You should disable `follow_mouse_focus` in Qtile config,
 # because if it's enabled, the script will move the window under the
 # cursor instead of the keyboard selected window!
+#
+# https://docs.qtile.org/en/stable/manual/config/index.html#configuration-variables
 
 from libqtile.command.client import InteractiveCommandClient
 from sys import argv

@@ -25,3 +25,5 @@ The script have to implement these:
   - The name of the created workspace should be `#1`, `#2`, `#3`, ..., to make it easily searchable in the list
   - If there is only one window left on this workspace, move it to the main workspace and delete this workspace
 - If the selected window and the focused window are on different workspaces, move the focused window to the workspace of the selected window.
+
+You should disable focus by mouse in your window manager's config, because if it's enabled, the script will move the window under the cursor instead of the keyboard selected window!
