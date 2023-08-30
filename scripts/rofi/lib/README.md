@@ -10,7 +10,7 @@ Open a terminal and set its title.
 
 ## Open project
 
-Open a project directory, name the terminal, fetch latest modifications, show log, etc. Tweak to your needs, for example you can open up VSCode, database manager or whatever you need.
+Open a project directory, name the terminal, fetch latest modifications, show log, etc. If the directory is not exists (there are no results for the query in Rofi), open a named terminal. Tweak to your needs, for example you can open up VSCode, database manager or whatever you need.
 
 ## Group windows
 
