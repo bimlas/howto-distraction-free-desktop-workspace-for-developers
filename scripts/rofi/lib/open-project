@@ -4,11 +4,13 @@
 # https://github.com/bimlas/home/blob/04576c810f1f0bce59980c1cb1767f6ebf20445c/linux/.gitconfig_files/custom_commands/git-fetch-log
 
 # You may have to add `--detach` to your terminal (for example in case of Kitty)
-if [ ! -d "${DIRECTORY}" ]; then
+if [ "x${ROFI_RETV}" = "x2" ]; then
+  # Selected a custom entry
   xfce4-terminal \
     --title "${TITLE}" \
     --working-directory "${PROJECTS_DIR}"
 else
+  # Selected a project
   xfce4-terminal \
     --title "${TITLE}" \
     --working-directory "${DIRECTORY}" \
