@@ -1,4 +1,4 @@
 #!/bin/bash
 
 # You may have to add `--detach` to your terminal (for example in case of Kitty)
-xfce4-terminal --title "${TITLE}"
+nohup xfce4-terminal --title "${TITLE}" > /dev/null &
