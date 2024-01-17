@@ -16,3 +16,5 @@ rofi \
   -show window \
   -modi window,project:"${SCRIPT_DIR}/modes/project",ssh \
   -window-command "${SCRIPT_DIR}/lib/group-windows.${WINDOW_MANAGER} {window}"
+  # You can also use the "join windows" script in i3
+  # -window-command "${SCRIPT_DIR}/lib/join-windows.i3 {window}"
