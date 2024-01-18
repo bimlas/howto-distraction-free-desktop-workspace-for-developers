@@ -119,7 +119,7 @@ Please note that these instructions assume a specific workflow and usage of wind
 
 The workspaces will actually be optional views rather than continuous parts of your workflow, but due to their ease of use, you will likely use them frequently. For example, you can easily move one element of a three-member group to a new group with a fourth application, and when you're done with your task, you can move it back to its original position in the three-member group.
 
-### Join windows in i3
+### NEW: Join windows in i3
 
 i3 is a manual tiling window manager that has a high degree of freedom in window placement (compared to the more limited layout capabilities of dynamic window managers). You don't need a new workspace to see the windows next to each other and still keep the current workspace organized, it's enough to put them in a common container. If the other windows in the workspace are arranged in tabs, then this container will only appear with a split screen, the others will remain maximized. To do this as simply as possible, you can select which windows you want to connect using Rofi, similar to the solution above. This differs from the previous solution in that instead of sending the current window to the selected window, it drags the selected window next to the current window, because it is easier to insert a new window into the current layout instead of having to remember what layout the selected window is in and whether the current one fits into it.
 
